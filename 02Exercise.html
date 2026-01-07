@@ -1,0 +1,60 @@
+<!-- Create 2 buttons 'Add to cart' and 'Buy now'. Use CSS to give them
+yellow and orange background colors:
+
+Add the HTML structure to exercise 4e (add <! DOCTYPE html>, <html>
+<head>, <body>) and put the elements into the <head> or <body>.
+
+
+change the title at the top of the tab to 'Buttons'.
+
+ add a <script> element so that when the page
+loads, it displays the message 'Welcome!' in the Console.
+
+Using HTML and CSS, try to copy the
+design on the right.
+(Make sure to follow the HTML structure.)
+
+add onclick=" ... " attributes to the two buttons:
+. When clicking 'Add to cart', create a popup with the text 'Added'.
+. When clicking 'Buy now', display the message 'Loading ... ' in the
+Console, and then create a popup with the text 'Purchased'.
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .cart-btn{
+    background-color:Yellow;
+    border:black solid 2px;
+    }
+   .buy-btn{
+    background-color:orange;
+    border:black solid 2px;
+   }
+  
+  </style>
+</head>
+<body>
+  <p>Adults Plain Cotton T-shirt</p>
+  <p>Price:$7.99</p>
+  <button class="cart-btn" 
+  onclick="
+  alert('Added');
+  ">Add to cart</button>
+
+  <button class="buy-btn"
+  onclick="
+  alert('Loading..');
+  alert('Purchased');
+  ">Buy now</button>
+  <script>
+    alert('Welcome!')</script>
+ 
+</body>
+</html>

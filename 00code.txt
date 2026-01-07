@@ -1,0 +1,16 @@
+// Giving instruction to computer and computer follows that instruction
+// order of operations: (),      *,/       +,- 
+// 0.1+0.2=0.3000000004 its not the problem of js only but of every other programming langyage
+computer=0,1
+humans=0 to 9
+
+10 = 2
+while storing decimal number there are some inaccuracy 
+while working with money in decimal best practice is to work in cents and convert back to dollars.in most case 7.5 dollar + 5.5 dollar we first convert them into cent 750+550 then divide by 100 to make it accurate .
+typecoercion = automatic type conversion "string"+int=String
+
+
+strings=' ' , " " ,` `(template strings)
+template strin adv = multiline string, ${}= interpolation
+
+multiple space are combine into 1 single space 

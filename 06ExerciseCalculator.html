@@ -1,0 +1,76 @@
+<!-- 1 create a button 1,2,3,+,==
+2 create variable with empty string
+3. When we click the '1' button:
+. Add the string '1' to the calculation variable: calculation += '1';
+. Display the calculation in the console: console.log(calculation);
+4. Do the same for the '2', '3', and '+' buttons (add ' +' instead of '+').
+
+5. When we click the '=' button, use the code: eval(calculation);
+(eval( ... ) converts the calculation string into actual math)
+. Save the result back in 'calculation': calculation = eval(calculation
+· Display the result in the console: console.log(calculation);
+
+6. Create the rest of the buttons in the
+calculator. To create multiple rows
+of buttons, put the buttons inside
+<p> elements like this: -->
+
+
+<!DOCTYPE html>
+<html >
+  <head>
+  
+    <title>Cart Quantity</title>
+    <style>
+     
+    </style>
+
+  </head>
+
+  <body>
+    <p>
+    <button onclick="
+      calculation+='1';
+      console.log(calculation);">1</button>
+    <button onclick="
+      calculation+='2';
+      console.log(calculation);">2</button>
+    <button onclick="
+      calculation+='3';
+      console.log(calculation);">3</button>
+    </p>
+
+    <p>
+       <button onclick="
+      calculation+='4';
+      console.log(calculation);">4</button>
+       <button onclick="
+      calculation+='5';
+      console.log(calculation);">5</button>
+       <button onclick="
+      calculation+='6';
+      console.log(calculation);">6</button>
+    </p>
+    <p>
+    <button onclick="
+      calculation+=' + ';
+      console.log(calculation);
+     ">+</button>
+    <button onclick="
+     calculation=eval(calculation);
+     console.log(calculation);">=</button>
+
+    </p>
+   
+    <script>
+      let calculation="";
+
+
+    
+    
+    </script>
+   
+  </body>
+
+</html>
+
