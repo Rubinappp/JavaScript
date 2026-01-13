@@ -1,0 +1,67 @@
+<!--
+6a. Create a variable called 'hour' and save the current hour of the day
+(use 24-hour format and save it as a number between 0 and 23).
+. If hour is between 6 and 12, display 'Good morning!' in the console
+. If hour is between 13 and 17, display 'Good afternoon!' in the console
+. Otherwise, display 'Good night!' in the console
+
+6b. Continuing from 6a, try changing the value in the 'hour' variable to
+make it display different messages.
+
+6c. Continuing from 6a, create a variable called 'name' and save your
+name inside (as a string). Update the if-statement to display your
+name in each message. For example: 'Good morning ${name}!'
+
+6d. Imagine an amusement park that has a discount for children (6 year
+and younger) or seniors (65 years and older).
+· Create a variable 'age' and save a person's age inside.
+. Create an if-statement that checks if the person qualifies for a
+discount. If they do, display 'Discount' in the console. Otherwise,
+display 'No discount' in the console.
+Note: try to use the || operator in your solution.
+· Try changing the 'age' variable to display different messages.
+
+6e. Continuing from exercise 6d, let's say the discount is only available
+if it is not a holiday. Create a variable: const isHoliday = true;
+· Update the code so that in order to get a discount, people must
+meet the age requirement and it is also not a holiday.
+. Note: && has a higher priority than || so you may need to use
+brackets () to control which code gets done first.
+· Try changing the value of isHoliday to display different messages.
+-->
+<DOCTYPE! html>
+
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      let hour=7;
+      let name="Rubina";
+      if(hour>6 && hour<12){
+        console.log(`Good morning ${name}`);
+      }
+      else if(hour>13 && hour<17){
+        console.log(`Good afternoon ${name}`);
+
+      }
+      else{
+        console.log(`Goodnight ${name}`);
+      }
+
+
+     
+     let age =2;
+     const isHoliday=true;
+     if((age<=6 || age>=65)&& isHoliday){
+      console.log("Discount");
+     }
+     else {
+      console.log("No discount");
+
+     }
+
+    </script>
+  </body>
+</html>

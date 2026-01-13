@@ -1,6 +1,7 @@
-// Giving instruction to computer and computer follows that instruction
-// order of operations: (),      *,/       +,- 
-// 0.1+0.2=0.3000000004 its not the problem of js only but of every other programming langyage
+Giving instruction to computer and computer follows that instruction
+order of operations: (),      *,/       +,- 
+
+ 0.1+0.2=0.3000000004 its not the problem of js only but of every other programming language
 computer=0,1
 humans=0 to 9
 
@@ -13,4 +14,4 @@ typecoercion = automatic type conversion "string"+int=String
 strings=' ' , " " ,` `(template strings)
 template strin adv = multiline string, ${}= interpolation
 
-multiple space are combine into 1 single space 
+multiple space are combine into 1 single space in html.

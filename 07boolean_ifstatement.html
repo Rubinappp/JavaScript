@@ -19,7 +19,7 @@
      console.log(typeof `true`)
      console.log(typeof true)
      
-     console.log(5>6-3) //compariosn opetator has lower priority than other operators.
+     console.log(5>6-3) //comparison opetator has lower priority than other operators.
 
      if(true)
      {
@@ -28,13 +28,51 @@
      else{
       console.log('else')
      }
+
      const age=15;
      if(age>=15){
-      consolr.log("You can drive");
+      console.log("You can drive");
      }
      else{
       console.log('You cannot drive');
      }
+
+ 
+   /*
+
+    // Truthy and Falsy value
+
+     if(5){
+      console.log('truthy value');
+     }
+
+     if(0){
+      console.log('Falsy value');
+     }
+
+     if(-1){
+      console.log('truthy value');
+     }
+     console.log('text'/5); //NaN
+     let variable;
+     console.log(variable); //Undefined
+
+     */
+    const result=true?'truthy':'falsy'
+    console.log(result)
+ 
+
+  const message=false && 'hello'
+  console.log(message)
+
+  const message1= 5 && 'hello'
+  console.log(message1)
+  
+  const currency='EUR' || 'USD'; // or operator here is used to set default value which is USD in here
+  console.log(currency)
+
+  const msg=false || true;
+  console.log(msg)
 
 
 
@@ -43,12 +81,26 @@
   </body>
 
 </html>
-<!-- comparison operator
+<!-- 
+
+Falsy values:
+False,0,'',NaN ,undefined
+Truthy values: any value not on falsy values
+
+shortcuts for if-statements 
+1 Ternary operator?:
+2 Guard operator &&
+3 default operator ||
+
+comparison operator
 <,>,>=,<=,===,!== 
 == is not used mostly because if string and int is checked with == it will convert int into string. which we dont want
 
+logical operators
+&&,||,!
 
-() ,* / ,+ -, comparison operator
+order of operations
+() ,* / ,+ -, comparison operator,logical operator
 
 -->
 

@@ -1,0 +1,67 @@
+
+Truthy and Falsy
+Falsy values:False,0,'',NaN ,undefined
+Truthy values: any value not on falsy values
+
+
+
+
+shortcuts for if-statements 
+1 Ternary operator?:
+2 Guard operator &&
+3 default operator ||
+----------------------------------
+Guard operator example:
+   if (false && value2){ 
+    console.log("True")
+  }
+- The left side is already false
+- JavaScript does not evaluate the right side
+- Execution stops early → this is called   short-circuit evaluation
+- Often used as a guard to prevent unnecessary checks
+
+
+&& returning a value
+
+  const message= 5 && 'hello'
+  console.log(message)
+- 5 is truthy
+- && returns the last truthy value
+- So 'hello' is assigned to message
+
+  This is shortut for..... 
+  if(condition){
+    console.log('hello')
+  }
+
+----------------------------------
+default operator example:
+if (True || value2){ 
+    console.log("True")
+  }
+  if first one is true we already know result is true so js doesn't check right side.
+----------------------------------
+  const message= 5 || 'hello'
+- 5 is truthy
+- || returns the first truthy value
+- So 'hello' is not used
+----------------------------------
+const message = 0 || 'hello';
+console.log(message); // 'hello'
+- 0 is falsy
+-'hello' acts as the default value
+
+
+
+comparison operator
+<,>,>=,<=,===,!== 
+== is not used mostly because if string and int is checked with == it will convert int into string. which we dont want
+
+
+logical operators
+&&,||,!
+&& > || priority 
+
+order of operations
+() ,* / ,+ -, comparison operator,logical operator
+
