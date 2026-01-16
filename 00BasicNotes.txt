@@ -65,3 +65,13 @@ logical operators
 order of operations
 () ,* / ,+ -, comparison operator,logical operator
 
+Function defination:
+helps to reuse code
+function Function-name(){
+
+}
+Rules for function names:
+-No special word like function.
+-cant start with number
+-can't use special character
+-best practice to use camelCase
