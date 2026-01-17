@@ -18,15 +18,30 @@
         console.log("Hello");
         console.log(2 + 2);
      }
+
+
+     function calculateTax(cost,taxPercent=0.1){
+      console.log(cost * taxPercent);
+     }
      function1();
+
+     calculateTax(1000,0.1);
+     calculateTax(5000,0.3);
 
     </script>
    
   </body>
 
 </html>
-Rules for function names:
+<!-- Rules for function names:
 -No special word like function.
 -cant start with number
 -can't use special character
 -best practice to use camelCase
+
+Rules for parameter names:
+-No special word .
+-cant start with number
+-can't use special character except:$_
+
+We can set default value in parameter-->
