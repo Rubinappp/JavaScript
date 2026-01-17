@@ -75,3 +75,10 @@ Rules for function names:
 -cant start with number
 -can't use special character
 -best practice to use camelCase
+
+Rules for parameter names:
+-No special word .
+-cant start with number
+-can't use special character except:$_
+
+We can set default value in parameter.
