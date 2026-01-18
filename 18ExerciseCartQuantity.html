@@ -1,2 +1,62 @@
 <!-- 7k. Create a copy of the Cart Quantity project from exercise 6l.
-. Create a function 'updateCartQuantity' and reuse the code. -->
+. Create a function 'updateCartQuantity' and reuse the code. 
+7l. Modify 'updateCartQuantity' so that if the quantity is invalid, alert();
+and then return; (this is called an early return). An early return
+make our code cleaner because we can remove the 'else-if' / 'else'.
+-->
+<!DOCTYPE html>
+<html >
+  <head>
+  
+    <title>Cart Quantity</title>
+    <style>
+     
+    </style>
+
+  </head>
+
+  <body>
+    <button onclick=" 
+      console.log(`Cart quantity:${cartQuantity}`)
+      ">Show Quantity</button>
+
+    <button onclick ="
+      updateCartQuantity(1);
+    ">Add to Cart</button>
+
+    <button onclick="
+     updateCartQuantity(2);
+    ">+2</button>
+
+    <button onclick="
+    updateCartQuantity(3);
+    ">+3</button>
+
+     <button onclick="
+    updateCartQuantity(-1)
+    ">-1</button>
+
+    <button onclick="
+    cartQuantity=0;
+    console.log('Cart was reset.');
+    console.log(`Cart quantity:${cartQuantity}`);
+    ">Reset Cart</button>
+    <script>
+      let cartQuantity=0;
+      function updateCartQuantity(value){
+        if (cartQuantity+value > 10){
+        alert('The cart is full');
+        return; //early return to remove else condition
+      }
+    
+      cartQuantity=cartQuantity+value;
+      console.log(`Cart quantity:${cartQuantity}`);
+    }
+
+    
+    </script>
+   
+  </body>
+
+</html>
+

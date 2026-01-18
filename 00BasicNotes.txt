@@ -1,9 +1,27 @@
+"5" + "6" ="56"(concatenation)
+5+"6" =11 (Type coercion)
+=========================================================
+1. early return is nicer than else condition.
+function checkAge(age) {
+  if (age < 18) {
+    return console.log("Too young");
+  }
+  console.log("You can vote");
+}
+
+
+2. using scope variable with return statement is better than using global variable.
+function sum(a, b) {
+  const result = a + b;   // local variable
+  return result;
+}
+=========================================================
 
 Truthy and Falsy
 Falsy values:False,0,'',NaN ,undefined
 Truthy values: any value not on falsy values
 
-
+=========================================================
 
 
 shortcuts for if-statements 
@@ -11,7 +29,7 @@ shortcuts for if-statements
 2 Guard operator &&
 3 default operator ||
 ----------------------------------
-Guard operator example:
+~.Guard operator example:
    if (false && value2){ 
     console.log("True")
   }
@@ -20,7 +38,7 @@ Guard operator example:
 - Execution stops early → this is called   short-circuit evaluation
 - Often used as a guard to prevent unnecessary checks
 
-
+----------------------------------
 && returning a value
 
   const message= 5 && 'hello'
@@ -33,9 +51,9 @@ Guard operator example:
   if(condition){
     console.log('hello')
   }
-
 ----------------------------------
-default operator example:
+
+~ default operator example:
 if (True || value2){ 
     console.log("True")
   }
@@ -51,7 +69,7 @@ console.log(message); // 'hello'
 - 0 is falsy
 -'hello' acts as the default value
 
-
+=========================================================
 
 comparison operator
 <,>,>=,<=,===,!== 
@@ -61,24 +79,29 @@ comparison operator
 logical operators
 &&,||,!
 && > || priority 
-
+=========================================================
 order of operations
 () ,* / ,+ -, comparison operator,logical operator
+=========================================================
 
 Function defination:
 helps to reuse code
 function Function-name(){
 
 }
+=========================================================
+
 Rules for function names:
 -No special word like function.
 -cant start with number
 -can't use special character
 -best practice to use camelCase
+=========================================================
 
 Rules for parameter names:
 -No special word .
 -cant start with number
 -can't use special character except:$_
+=========================================================
 
 We can set default value in parameter.
