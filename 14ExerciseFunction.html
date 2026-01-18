@@ -1,0 +1,38 @@
+<!-- Lesson 7 Exercises - Functions
+
+7a. Create a function called 'greet' that displays the message 'Hello!'
+in the console. Call / run this function a few times using: greet();
+
+7b. Continuing from 7a, add a parameter called 'name' to the 'greet'
+function and display the message: 'Hello ${name}!'
+Call the function a few times with different names: greet('Simon');
+
+7c. Try calling greet() without a name (it will display 'Hello undefined!').
+Modify the function so that if 'name' is undefined, it will display
+'Hi there!' instead.
+(Hint: use an if-statement. Since undefined is a falsy value, you
+can use: if (!name) { ... } to check if 'name' is undefined). 
+
+-->
+
+
+<DOCTYPE! html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    
+    <script>
+      function greet(name){
+        if(!name){  // (name=== undefined)
+          console.log('Hello there!')}
+          
+        else{console.log(`Hello ${name}`);
+      }
+    } 
+      greet('Rubina');
+      greet();
+    </script>
+  </body>
+</html>

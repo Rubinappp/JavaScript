@@ -1,0 +1,47 @@
+<!-- 7d. Create a function 'convertToFahrenheit(celsius)' that takes a numb
+in degrees Celsius and returns a number in degrees Fahrenheit.
+· Formula: Fahrenheit = (Celsius * 9 / 5) + 32
+· convertToFahrenheit(25) => 77
+
+7e. Create a function 'convertToCelsius(fahrenheit)' that takes a numb
+in degrees Fahrenheit and returns a number in degrees Celsius.
+· Formula: Celsius = (Fahrenheit - 32) * 5 / 9
+· convertToCelsius(86) => 30
+
+7f. Create a function 'convertTemperature(degrees, unit)' that takes a
+number and a unit ('C' or 'F'), and converts it into the other unit.
+· convertTemperature(25, 'C') => '77F'
+· convertTemperature(86, 'F') => '30C'
+Note: return a string, and try to reuse the functions from 7d and 7e. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function convertToFahrenheit(celsius){
+      const Fahrenheit=(celsius*9/5)+32
+      return Fahrenheit;
+    }
+    function convertToCelsius(Fahrenheit){
+      const Celsius=(Fahrenheit-32)*5/9
+      return Celsius;
+    }
+    function convertTemperature(degrees,unit){
+        if(unit==='F'){
+          return `${convertToCelsius(degrees)}C`;
+        }
+        else if(unit==='C'){
+          return `${convertToFahrenheit(degrees)}F`;
+        }
+    }
+    console.log(convertToFahrenheit(25));
+    console.log(convertToCelsius(86));
+    console.log(convertTemperature(25,'C'));
+    console.log(convertTemperature(86,'F'));
+    
+  </script>
+</body>
+</html>

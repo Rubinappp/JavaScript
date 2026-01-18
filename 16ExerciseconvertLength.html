@@ -1,0 +1,79 @@
+<!-- 7g. Create a function convertLength(length, from, to) that takes a
+number and a unit ('km' or 'miles') and converts the length to another
+unit ('km' or 'miles'). Note: 1 mile = 1.6 km (approximately).
+· convertLength(50, 'miles', 'km') => '80 km'
+· convertLength(32, 'km', 'miles') => '20 miles'
+· convertLength(50, 'km', 'km') => '50 km'
+7h. Update convertLength to support converting between km, miles,
+and also feet. Note: 1 mile = 5280 ft, 1 km = 3281 ft (approximately).
+· convertLength(5, 'miles', 'km') => '8 km'
+· convertLength(5, 'miles', 'ft') => '26400 ft'
+· convertLength(5, 'km', 'ft') => '16405 ft'
+7i. Update convertLength so that if you give it an invalid unit, it will
+return ` Invalid unit: ${unit} .
+. convertLength(5, 'lbs', 'Ibs') => 'Invalid unit: Ibs' -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function convertLength(length,from,to){
+      if(from!=='km'&& from!=='ft'&& from!=='miles'){
+        return `Invalid unit:${from}`;
+      }
+      else if(to!=='km'&& to!=='ft'&& to!=='miles') {
+        return `Invalid unit:${to}`;
+      }
+
+      if(from==='miles'&& to==='km'){
+        const kilometer=length*1.6
+        return `${kilometer}${to}`;
+      }
+
+      else if(from==='km' && to==='miles'){
+        const miles=length/1.6
+        return `${miles}${to}`;
+      }
+
+      else if(from===to){
+       
+            return `${length}${to}`;
+        
+      
+      }
+    
+
+      else if(from==='miles'&& to==='ft'){
+       const feet=length*5280
+        return `${feet}${to}`;
+      }
+
+      else if(from==='ft'&& to==='miles'){
+    const miles=length/5280;
+      return`${miles}${to}`;
+    }
+
+      else if(from==='ft'&& to==='km'){
+     const km=length/3281;
+      return`${km}${to}`;
+    }
+
+        else if(from==='km'&& to==='ft'){
+     const feet=length*3281;
+      return`${feet}${to}`;
+    }
+ 
+  
+  }
+    console.log(convertLength(50,'miles','km'));
+    console.log(convertLength(50,'km','km'));
+    console.log(convertLength(50,'km','miles'));
+    console.log(convertLength(50,'miles','ft'));
+    console.log(convertLength(50,'km','ft'));
+    console.log(convertLength(50,'lbs','lbs'));
+  </script>
+</body>
+</html>
