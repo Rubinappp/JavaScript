@@ -18,7 +18,7 @@ function sum(a, b) {
 =========================================================
 
 Truthy and Falsy
-Falsy values:False,0,'',NaN ,undefined
+Falsy values:False,0,'',NaN ,undefined,null
 Truthy values: any value not on falsy values
 
 =========================================================
@@ -105,3 +105,73 @@ Rules for parameter names:
 =========================================================
 
 We can set default value in parameter.
+
+=========================================================
+
+-object group multiple value together
+-let us use multiple value together.
+-we have property-value pairs inside object seperated by comma.
+-We can use property ,nested object and method inside object .
+
+  const object_name={
+    property_name:value,
+    [property_name]:value // can only access through bracket notation no dot notation
+
+    nested_object :{
+      inner_property:value;
+    }
+
+    fun:function functon1(){
+
+    }
+  };
+
+Access:
+object-name.property_name;
+object-name[property_name];
+
+object-name.nested_object ;
+object-name.nested_object.inner_property ;
+
+- Bracket notation let us use property that normally dont work with dot notation.
+
+console.log(product.delivery-time) // error
+- Here, since - is regarded as substract and it will try to subtract so in that case we need to use bracket.so there are lots of cases bracket are useful instead of dot.
+
+-Function inside object is called method.
+console.log = console is object log is method inside that object.
+
+More  built-in objects like console,Math...
+1 JSON
+2 localstorage
+
+JSON object:
+-javascript object notation.
+- has similar syntax to js object but  has lesser feature 
+
+JS object               vs          Json 
+                                  - all property must use double quotation in json.
+                                  - doesn't support function inside.
+                                  - can be understood by almost any programming language.
+                                  -More universal
+                                  - We use json when we want to send data between computer that might be using different languages.
+                                  - we use this when we need to store data.
+
+Built-in json object: JSON
+- helps to convert js object to json.(JSON.stringify)
+- To convert json to js object  (JSON.parse)
+js object <->JSON
+
+
+local storage:
+variable are temporary after refresh/close variables are deleted or cleared from memory RAM.
+Local storage doesnt delete when refresh.
+
+localStorage('name','value') 
+localstorage only support strings.
+
+class:
+const class_name{
+  variable_name=value;
+}
+ 
