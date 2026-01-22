@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Objects</title>
+  <style></style>
+</head>
+
+<body>
+ <script>
+
+    const object4={
+    message:'Good Job',
+    price:999
+  };
+//  const message=object4.message;
+ const{message,price}=object4;
+ //if variable name and property name is same we can use this shortcut.This is called destructuring.
+
+ console.log(message);
+ console.log(price);
+
+
+ const object5={
+  // message:message 
+  message,
+  //----short hand property.if property and value have same name we can use this.
+
+  // method:function function1(){
+  //   console.log("method");
+  // }
+
+  method(){ //short hand method
+    console.log('method');
+  }
+ };
+ console.log(message);
+  object5.method();
+ </script>
+ 
+</body>
+
+</html>
+
+
+
+
+
+

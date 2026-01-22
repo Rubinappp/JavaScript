@@ -21,6 +21,9 @@ Truthy and Falsy
 Falsy values:False,0,'',NaN ,undefined,null
 Truthy values: any value not on falsy values
 
+null= intentionally want stg empty 
+undefined= which isnt given value .but we can set default value in case of that 
+
 =========================================================
 
 
@@ -165,13 +168,78 @@ js object <->JSON
 
 local storage:
 variable are temporary after refresh/close variables are deleted or cleared from memory RAM.
-Local storage doesnt delete when refresh.
+Local storage doesn't delete when refresh.
 
-localStorage('name','value') 
 localstorage only support strings.
+localStorage.setItem('name','value')
+localStorage.getItem('name')
+localStorage.removeItem('name')
 
 class:
 const class_name{
   variable_name=value;
 }
  
+
+Auto-boxing:Autoboxing is when JavaScript temporarily wraps a primitive value (number, string, boolean, symbol, bigint)
+into its corresponding object wrapper so we can access methods and properties.
+Eg: "Rubina".length 
+
+- It works with number and string
+Eg:0.toString() 
+- but wont work with null and undefined.
+ Eg: undefined.method() wrong X
+
+
+object is a reference .
+const score = { };
+ .The variable score  stores a reference (address) to that object.score is not the object itself.
+  Variable = label/tag
+  Object = memory block
+  Reference = address
+
+Copy by reference:
+const object1{
+  message:"Hello"
+}
+const object2=object1; 
+-this will copy reference 
+-memory eficient and time efficient.
+
+  object1.message="Good Job";
+  console.log(message) 
+   inspite of const object1 we were able to change the message property since object1 only consist of address of the original object.
+
+   console.log(object1===object2)// It will check the reference True or False
+
+shortcuts:
+a.Deconstructing 
+const object1={
+  message="Hello"
+}
+const message=object1.message;
+
+if we have same variable and property name.
+short cut.....
+object1{message}="hello";
+
+
+b.Short hand property:
+if property and value has same name we can do this:
+const object1={
+  message  // message:message
+}
+
+
+c.Short hand method
+const object1={ 
+  method:function fun1()
+ {console.log("method");}
+
+}
+short cut....
+const object1={
+  method(){
+    console.log("method");
+  }
+}
