@@ -243,3 +243,10 @@ const object1={
     console.log("method");
   }
 }
+
+
+
+some built in methods:
+Object.keys(obj)     // array of keys
+Object.values(obj)  // array of values
+Object.entries(obj) // array of [key, value]
