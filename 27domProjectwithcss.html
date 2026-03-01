@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>DOM project</title>
+  <style>
+
+    body{
+      font-family: Arial;
+    }
+    .subscribe-btn{
+      border:none;
+    background-color: black;
+    border-radius: 100px;
+    color:white;
+    padding:10px 15px 10px 15px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-bottom:50px;
+    }
+    .is-subscribed{
+      background-color:rgb(237, 235, 235);
+      color:black;
+    }
+
+    .cost-input{
+      padding:10px;
+    }
+    .cal-button{
+      padding:12px 15px;
+      background-color:green;
+      color:white;
+      border:none;
+      font-size:15px;
+      cursor:pointer;
+      
+    }
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button  onclick="
+     subscribe();
+    "class="js-subscribe-btn subscribe-btn">Subscribe</button>
+   
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40=+$10 shipping.</p>
+  <p>Orders over $40 =FREE shipping.</p>
+
+  <input placeholder="Cost of order" class="js-cost-input cost-input"
+  onkeydown="
+  handleKeydown(event);
+  ">
+
+  <button onclick=" 
+  calculateTotal();"
+  class="cal-button" >Calculate</button>
+
+<p class="js-total-cost">
+
+</p>
+  <script>
+  
+  function handleKeydown(event){
+ 
+    if(event.key === 'Enter'){
+    calculateTotal();
+  }}
+  function calculateTotal(){
+    const inputElement=document.querySelector('.js-cost-input')
+    let cost=Number(inputElement.value) 
+    console.log(cost)
+    if(cost<40){
+      cost+=10
+    }
+    document.querySelector(".js-total-cost").innerText=`$${cost}`
+  }
+    function subscribe(){
+      const buttonElement=document.querySelector('.js-subscribe-btn');
+          if(buttonElement.innerText==='Subscribe'){
+      buttonElement.innerHTML='Subscribed'
+      buttonElement.classList.add('is-subscribed');/* it adds new class*/
+          }
+          else{
+            buttonElement.innerHTML='Subscribe'
+            buttonElement.classList.remove('is-subscribed')/* it removes new class*/
+          }
+          }
+  
+  </script>
+</body>
+</html>
+
+<!-- best practice is to make seperate class for css property diferent from used in dom
+ HTML elements are js object that has its own property like innerText ,innerHTML 
+ 
+ 
+ class list = is object gives us control of the class attribute
+ 
+ when we click button 
+ 1 add class
+ class will have different styles-->

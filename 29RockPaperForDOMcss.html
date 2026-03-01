@@ -1,0 +1,58 @@
+<!-- to be continued -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper scissors</title>
+  
+  <link rel="stylesheet" href="styles/30-rock-paper-scissors.css">
+</head>
+
+<body>
+  <p class="title">Rock paper Scissors</p>
+
+  <button onclick=" 
+      pickComputerMove();
+      playGame('rock');          
+    " class="move-button">
+    <img src="images/rock-emoji.png"class="move-icon"
+    >
+  </button>
+
+  <button onclick=" 
+      pickComputerMove();
+      playGame('paper');  
+    "class="move-button">
+   <img src="images/paper-emoji.png"class="move-icon">
+  </button>
+
+  <button onclick=" 
+    pickComputerMove();
+    playGame('Scissor');
+    "class="move-button"><img src="images/scissors-emoji.png"class="move-icon">
+  </button>
+
+  <p class="js-result result">You win</p>
+  <p class="js-move move"></p>
+  <p class="js-score score"> </p>
+
+  <button onclick="
+  scoreTrack.Win=0;
+  scoreTrack.Lose=0;
+  scoreTrack.Tie=0;
+  localStorage.removeItem('scoreTrack');
+  updateScoreElement();
+  " class="reset-btn">Reset Score</button>
+
+
+  <script src="scripts/30-rock-paper-scissors.js">
+
+  
+  </script>
+</body>
+
+</html>
+
+
+<!-- if we have 3 picture of different shape and size and we need tp make them look in same row having same size with border 
+use height and width instead of padding -->

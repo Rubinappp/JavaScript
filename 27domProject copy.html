@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>DOM project</title>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button  onclick="
+     subscribe();
+    "class="subscribe-btn">Subscribe</button>
+   
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40=+$10 shipping.</p>
+  <p>Orders over $40 =FREE shipping.</p>
+  <input placeholder="Cost of order" class="js-cost-input"
+  onkeydown="
+  // console.log(event) event object is returned by event listener
+    // console.log(event.key) it returns key pressed
+  handleKeydown(event);
+  ">
+  <button onclick=" 
+
+  calculateTotal();
+  ">Calculate</button>
+<p class="js-total-cost">
+
+</p>
+  <script>
+  
+  function handleKeydown(event){
+ 
+    if(event.key === 'Enter'){
+    calculateTotal();
+  }}
+  function calculateTotal(){
+    const inputElement=document.querySelector('.js-cost-input')
+    let cost=Number(inputElement.value) // gives string value so needs to typecase to get number value
+    console.log(cost)
+    if(cost<40){
+      cost+=10
+    }
+    document.querySelector(".js-total-cost").innerText=`$${cost}`
+  }
+    function subscribe(){
+      const buttonElement=document.querySelector('.subscribe-btn');
+          if(buttonElement.innerText==='Subscribe'){
+      buttonElement.innerHTML='Subscribed'
+          }
+          else{
+            buttonElement.innerHTML='Subscribe'
+          }
+          }
+  
+  </script>
+</body>
+</html>
+
+ <!-- 
+1.if i got space in my Subscribe button innerHTML will not be equal to Subscribe (buttonElement.innerHTML==='Subscribe       ') this condition wont be true
+This can be solve by using innerText instead of innerHTML 
+
+
+clicks,keydowns=>event
+onclick,onkeydown=?event listener
+
+
+onclick = click
+onkeydown = key press
+onscroll = scrolling 
+onmouseleave= stop hovering over
+onmouseenter= hover over
+
+window object= gives web page
+window.document
+window.console.log
+window.alert
+
+js will automatically add window in front of other object used in webpage
+-->
