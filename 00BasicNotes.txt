@@ -307,4 +307,47 @@ js will automatically add window in front of other object used in webpage
  2 class will have different styles
 
  if we have 3 picture of different shape and size and we need tp make them look in same row having same size with border 
-use height and width instead of padding
+use height and width instead of padding.
+
+
+Array:
+const myArray=[1,"hello",{1:"value"}]
+myArray[0]=6
+myArray.push(10)// push at last index
+myArray.splice(0,1); //to remove 1 value from index 0
+console.log(myArray.length);
+console.log(Array.isArray([1,2]));
+
+array is object
+Array holds a reference.
+const array2=array1(same)
+To create copy
+const array3=array1.slice()
+  // accessing 
+  // first way =indexing
+  // second way = destructuring
+  const[firstValue,secondValue]=[1,2,3] 
+
+
+
+
+
+
+Basic foundation to create todo list add and delete:
+
+1.create array to store todos
+2. when we click add 
+3. get text from text box
+4. add it to array 
+5.console.log array
+
+To put task inside the web page(render)
+1.Loop through array
+2.Create some html code
+3Put the html code on the web page( using document.querySelector)
+
+Notes:since each todo is a one complete unit make many array of objects . 
+-by default align items are stretched meaning try to fit the height with each other.
+if  i change align item to center no longer be strected . 
+-p adds extra space above and below
+while div doesnt add extra space

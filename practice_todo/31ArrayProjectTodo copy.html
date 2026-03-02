@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+  <title>Todo list</title>
+</head>
+<body>
+  <p>Todo List</p>
+  <input placeholder="Todo name" class="js-name-input">
+   <input type="date" class="js-date-input">
+  <button onclick="
+  addTodo()
+ ">Add</button>
+
+  <div class="js-todo-list"></div>
+
+
+
+  <script>
+const todolist={ 
+  todo:["washDish",'play'],
+  todo_date:[]
+
+
+}
+function addTodo(){
+ js_element= document.querySelector('.js-name-input');
+ js_element1= document.querySelector('.js-date-input');
+
+ todo_value=js_element.value
+ todo_vdate=js_element1.value
+
+ todolist.todo.push(todo_value);
+ todolist.todo_date.push(todo_vdate);
+
+ js_element.value='';
+ js_element1.value='';
+
+ rendertodo();
+
+}
+console.log(todolist)
+
+function rendertodo(){
+
+let variable=''
+for (let i=0;i<todolist.todo.length;i++){
+value=todolist.todo[i]
+date_value=todolist.todo_date[i]
+html=`
+<p>${value} ${date_value}
+  <button onclick="
+  todolist.todo.splice(${i},1);
+  todolist.todo_date.splice(${i},1);
+  rendertodo();">delete</button></p>`
+
+variable+=html
+}
+document.querySelector('.js-todo-list').innerHTML=variable
+}
+  </script>
+</body>
+</html>
+
+<!-- steps
+1.create array to store todos
+2. when we click add 
+3. get text from text box
+4. add it to array 
+5.console.log array
+
+
+To put task inside the web page
+1.Loop through array
+2.Creaye some html code
+3Put the html code on the web page
+
+p adds extra space above and below
+while div doesnt add extra space-->        
