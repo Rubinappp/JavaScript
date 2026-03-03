@@ -329,10 +329,6 @@ const array3=array1.slice()
   const[firstValue,secondValue]=[1,2,3] 
 
 
-
-
-
-
 Basic foundation to create todo list add and delete:
 
 1.create array to store todos
@@ -351,3 +347,111 @@ Notes:since each todo is a one complete unit make many array of objects .
 if  i change align item to center no longer be strected . 
 -p adds extra space above and below
 while div doesnt add extra space
+
+
+
+Advance functions:
+a. we are saving function inside variable function1 as a value
+    const function1=function greeting(){
+      console.log("Hello2")}
+
+b. Ananomous function if we delete greeting name
+Eg:
+    var function2=function (){
+      console.log("Hello2")
+    }
+
+c.  we can pass function as a parameter to other function 
+Eg:
+function run(param){
+ param();
+}
+run(function(){
+  console.log("passing function as parameter")
+})
+
+d.setTimeout() built in function takes two paramter function,time to wait(ms)
+Eg:
+setTimeout(function(){
+  console.log("Timeout")
+},3000);
+console.log("Next")
+
+e.setInterval will keep runnning function every 3 sec .This is also asynchronous.
+Eg:
+setInterval(function(){
+  console.log("interval");
+},3000);
+
+//setInterval returns a number we can use this number to stop the autoplay.its unique for every execution.
+
+
+
+Add event listener: use instead of onlclick=
+
+very html element has method called addEventlistener()
+addEventListener()
+lets us run some code when we interact with the element 
+it sort of does same thing as onclick.
+
+it has two parameter inside :
+1. event - what type of interaction we want to listen
+2. function
+Eg:
+addEventListener('click', () => {
+  autoPlay();
+});
+
+adv: it lets us add multiple event listner to one event
+ we can remove some event listner as we wish using removeEventListner
+1 In addEventListener, we must pass a function, not call it.
+
+2 If we write autoPlay() with parentheses directly :
+addEventListener('click', autoPlay()); (WRONG):
+
+3 the function runs immediately when the page loads,
+because parentheses mean "execute now".
+
+ Correct ways:
+
+1) Pass the function reference.
+addEventListener('click', autoPlay);
+          or
+ 2) Use an anonymous/arrow function (if we need extra logic)
+addEventListener('click', () => {
+  autoPlay();
+});
+
+Advanced function:
+
+1 forEach:
+  will loop through array one by one  and call the function
+  ['make dinner',
+    'wash dishes'
+  ].forEach(function(value,index){
+    console.log(value);
+    console.log(index);
+  });
+
+
+  -for each method dont havecontinue method  so we can return to skip
+  -if we need to use break to exit loop early regular for loop is better . its not easy to exit in this loop.
+2. Arrow function
+  const arrowFunction=(param ,param1)=>{
+
+    console.log(param+1)
+    return param;
+  };
+  arrowFunction(5,6);
+
+3 filter()
+ (must return true or false here.)
+1.create new array
+2. return true,=> put the value in array
+3. return false,=> not put the value in array 
+
+4 map()
+(it doesnot care about true or false)
+Goes through each element
+create new array.
+whatever return => add to that new array

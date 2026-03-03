@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  //will loop through array one by one  and call the function
+  ['make dinner',
+    'wash dishes'
+  ].forEach(function(value,index){
+    console.log(value);
+    console.log(index);
+  });
+
+
+  //for each method dont havecontinue method  so we can return to skip
+  // if we need to use break to exit loop early regular for loop is better . its not easy to exit in this loop.
+   ['make dinner',
+    'wash dishes'
+  ].forEach(function(value,index){
+    if(value==='make dinner'){
+      return;
+    }
+    console.log(value);
+    console.log(index);
+  });
+
+
+// Arrow function
+  const arrowFunction=(param ,param1)=>{
+
+    console.log(param+1)
+    return param;
+  };
+  arrowFunction(5,6);
+
+const regularFunction=function(){
+  console.log('hello')
+}
+
+
+//one line arrow function
+const oneLine=()=> 2+3 // return 2+3 ;
+console.log(oneLine());
+
+// it is recommended to use arrow function in foreach
+["a",
+"b"].forEach((value ,index)=>{
+  console.log(value)
+  console.log(index)
+})
+
+const object2={
+  method:()=>{
+   console.log("Hello i am method inside object")
+  },
+ //shorthand it is recommended to use
+ method(){
+  console.log("Hello i am shortcut");
+ }
+}
+
+
+//filter method 
+console.log([1,-3,5].filter((value,index)=>{
+  return true; 
+})) // return all 3 value in new array
+
+
+//return only positive number
+console.log([1,-3,5].filter((value,index)=>{
+  return value>=0; // true value will be returned
+})) 
+
+
+console.log([1,1,3].map((value,index)=>{
+  return 10;
+}))   //[10,10,10]
+
+
+console.log([1,1,3].map(value=>value*2))   // we can remove return and make it shorter
+  </script>
+</body>
+</html>
+<!-- //filter()
+ (must return true or false here.)
+1.create new array
+2. return true,=> put the value in array
+3. return false,=> not put the value in array 
+
+map()
+(it doesnot care about true or false)
+Goes through each element
+create new array.
+whatever return => add to that new array
+
+-->

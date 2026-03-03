@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="" class="js-button">click</button>
+</body>
+
+<script>
+
+  const buttonElement=document.querySelector('.js-button')
+  buttonElement.addEventListener('click',()=>{
+    console.log('button clicked')
+  });
+//we can have multiple event listner
+const eventListener=()=>{console.log('button click2')}
+ buttonElement.addEventListener('click',eventListener);
+
+
+buttonElement.removeEventListener('click',eventListener);
+</script>
+</html>
+
+<!-- 
+every html element has method called addEventlistener()
+addEventListener()
+lets us run some code when we interact with the element 
+it sort of does same thing as onclick.
+
+it has two parameter inside :
+1. event - what type of interaction we want to listen
+2. function
+
+adv: it lets us add multiple event listner to one event
+ we can remove some event listner as we wish using removeEventListner
+-->

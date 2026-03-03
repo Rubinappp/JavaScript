@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <script>
+    function greeting(){
+      console.log("Hello")
+    }
+    greeting();
+
+
+
+    //we are saving function inside variable function1 as a value
+    const function1=function greeting(){
+      console.log("Hello2")
+    }
+    console.log(function1);
+    console.log(typeof function1);
+
+    function1();
+
+
+   //Ananomous function if we delete greeting name
+    var function2=function (){
+      console.log("Hello2")
+    }
+  //regular function is shortcut of this ananomous function. regular function(shortcut) whose adv is: hoisting we can call the function in any order
+
+
+  const object1={
+    fun:function(){
+      console.log("Helloobj")
+    }
+  }
+  object1.fun();
+
+// we can pass function as a parameter to other function 
+function run(param){
+ param();
+}
+run(function(){
+  console.log("passing function as parameter")
+})
+
+
+//setTimeout() built in function takes two paramter function,time to wait(ms)
+setTimeout(function(){
+  console.log("Timeout")
+},3000);
+console.log("Next")
+//after 3 sec will display timeout . 
+//This is asynchronous code=it will first set timer but dont wait immediately run other code first and after3 sec it will display timeout.
+
+
+
+//it will keep runnning function every 3 sec .This is also asynchronous
+setInterval(function(){
+  console.log("interval");
+},3000);
+
+  </script>
+</body>
+</html>
